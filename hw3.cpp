@@ -11,7 +11,7 @@ int main(int argc, char *argv[]){
 	map <string, bool> used;
 
 	int option_index = -1;
-	const char* short_options = "hlvV::?";
+	const char* short_options = "hlvV::f:?";
 	
 	const struct option long_options[] = {
 	//no argument            0
