@@ -6,7 +6,7 @@ default_goal: build def
 
 .PHONY: def
 def:
-	./parseApp -l -h -v --value=1
+	./parseApp -l -h -v --value=1 -f1
 
 .PHONY: run
 run:
