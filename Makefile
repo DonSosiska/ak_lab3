@@ -1,16 +1,16 @@
 .PHONY: build
 build:
-	g++ ./cmd_parse_app.cpp -o parseApp
+	g++ ./hw3.cpp -o app
 
 default_goal: build def 
 
 .PHONY: def
 def:
-	./parseApp -l -h -v --value=1 -f1
+	./app -l -h -v --value=1 -f1
 
 .PHONY: run
 run:
-	./parseApp -l
+	./app -l
 
 
 .DEFAULT_GOAL:=default_goal
