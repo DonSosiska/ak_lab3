@@ -22,6 +22,7 @@ int main(int argc, char *argv[]){
         {"list",0,NULL,'l'},
         {"version",0,NULL,'v'},
 	{"value",2,NULL,'V'},
+	{"flag", 1, NULL, 'f'},
         {NULL,0,NULL,0},
     };
     
@@ -58,6 +59,19 @@ int main(int argc, char *argv[]){
 				} else {
 					printf("value\n", optarg); 
 					used["V"] = true;
+				}
+				
+			}
+			break;
+		}
+		case 'f': {
+			if (used["f"] == false) {
+				if (optarg == NULL) {
+					printf("required argument", val); 
+					break;
+				} else {
+					printf("flag\n", optarg); 
+					used["f"] = true;
 				}
 				
 			}
